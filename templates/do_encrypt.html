@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <form class="col-lg-6 offset-lg-3" action="/encrypt" method="POST" enctype=multipart/form-data id="form_id">
+         <div class="d-flex flex-column min-vh-50 justify-content-center align-items-center">
+        <span>Введите парольную фразу</span><input type="text" name="password_phrase"><br>
+        <span>Укажите путь до файла</span><input type="text" name="path"><br>
+         <span>Выберите алгоритм шифрования</span>
+             <select name="algorithm">
+                 <option>DES</option>
+                 <option>AES</option>
+             </select>
+        <input type="submit" value="Отправить">
+         <a href="decrypt_encrypt_file"><input type="button" value="Назад"></a>
+         </div>
+    </form>
+</body>
+</html>
